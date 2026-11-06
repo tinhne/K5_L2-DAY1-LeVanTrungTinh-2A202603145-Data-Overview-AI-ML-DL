@@ -57,3 +57,21 @@ Nguồn: `segmentation_predictions.json`, chọn record `kitchen-001`.
 | Phát hiện vật thể     | Một hoặc nhiều box `xyxy` và class cho từng vật.                   | `kitchen` có 11 prediction ở ngưỡng 0.35; có box chạm mép ảnh và nhiều vật nhỏ có score thấp. | Vẽ box cho từng instance nhìn thấy, xử lý vật bị cắt theo guideline. | Kiểm tra class, số box, biên box, box trùng và false positive.                |
 | Instance segmentation | Một polygon mask cho từng instance, kèm class.                     | `kitchen-004` có polygon 100 điểm và chạm gần mép ảnh; biên bị che/cắt cần quy tắc rõ.        | Vẽ mask bám biên phần nhìn thấy của từng vật.                        | Kiểm tra polygon kín, bám đúng biên, không lấn nền/vật khác và đúng instance. |
 
+## 5. An toàn dữ liệu
+
+1. Chỉ sử dụng các file output cần cho bài lab, không thêm hoặc công khai thông tin cá nhân hay dữ liệu ngoài phạm vi.
+2. Nếu gặp ảnh hoặc dữ liệu không đúng phạm vi, dừng xử lý và báo Lab Coach/reviewer để được hướng dẫn.
+
+## 6. Checklist trước khi nộp link repo
+
+- [x] `REPORT.md`
+- [x] `classification_predictions.json`
+- [x] `detection_predictions.json`
+- [x] `segmentation_predictions.json`
+- [x] `IMAGE_ATTRIBUTION.md`
+- [x] `classification_top5.png`
+- [x] `detection_predictions.png`
+- [x] `segmentation_prediction.png`
+- [x] Ô validation cuối notebook báo `PASS` 
+- [x] Không có họ tên, MSSV hoặc dữ liệu nhạy cảm trong báo cáo/output
+- [x] Đã nộp link repository trên LMS
